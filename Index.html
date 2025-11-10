@@ -1,83 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Puzzle Master Pro - سيد الألغاز المحترف</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- شاشة البداية -->
-    <div id="start-screen" class="screen active">
-        <div class="start-container">
-            <h1>🧠 Puzzle Master Pro</h1>
-            <p>اختبار ذكاء بمستويات متدرجة الصعوبة</p>
-            <button id="start-btn" class="btn-primary">ابدأ اللعبة</button>
-            <button id="leaderboard-btn" class="btn-secondary">لوحة المتصدرين</button>
-        </div>
-    </div>
-
-    <!-- شاشة اللعبة الرئيسية -->
-    <div id="game-screen" class="screen">
-        <div class="container">
-            <header>
-                <div class="player-info">
-                    <span>اللاعب: <input type="text" id="player-name" placeholder="اسمك" maxlength="15"></span>
-                </div>
-                <h1>Puzzle Master Pro</h1>
-                <div class="score-board">
-                    <span>النقاط: <span id="score">0</span></span>
-                    <span>المستوى: <span id="level">1</span></span>
-                    <span>الوقت: <span id="timer">60</span>s</span>
-                </div>
-            </header>
-
-            <div class="game-area">
-                <div class="puzzle-info">
-                    <span id="puzzle-type">لغز رياضي</span>
-                    <span id="difficulty">سهل</span>
-                </div>
-                
-                <div id="puzzle-container"></div>
-                
-                <div class="controls">
-                    <button id="hint-btn" class="btn-hint">💡 تلميح (<span id="hints-left">3</span>)</button>
-                    <button id="skip-btn" class="btn-skip">⏭️ تخطي (-5 نقاط)</button>
-                    <button id="submit-btn" class="btn-primary">✅ تحقق من الإجابة</button>
-                </div>
-            </div>
-
-            <div class="progress-container">
-                <div class="progress-bar">
-                    <div class="progress-fill" id="progress-fill"></div>
-                </div>
-                <span>التقدم: <span id="progress-text">0%</span></span>
-            </div>
-        </div>
-    </div>
-
-    <!-- شاشة لوحة المتصدرين -->
-    <div id="leaderboard-screen" class="screen">
-        <div class="leaderboard-container">
-            <h1>🏆 لوحة المتصدرين</h1>
-            <div id="leaderboard-list" class="leaderboard-list"></div>
-            <button id="back-btn" class="btn-secondary">العودة</button>
-        </div>
-    </div>
-
-    <!-- عناصر الصوت -->
-    <audio id="correct-sound" preload="auto">
-        <source src="data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQQAAAAAAA==" type="audio/wav">
-    </audio>
-    <audio id="wrong-sound" preload="auto">
-        <source src="data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQQAAAAAAA==" type="audio/wav">
-    </audio>
-    <audio id="levelup-sound" preload="auto">
-        <source src="data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQQAAAAAAA==" type="audio/wav">
-    </audio>
-
-    <script src="sounds.js"></script>
-    <script src="leaderboard.js"></script>
-    <script src="script.js"></script>
-</body>
-</html>
